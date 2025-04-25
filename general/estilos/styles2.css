@@ -5,9 +5,9 @@ body {
     /* Elimina el margen que ponen los navegadores por defecto */
     margin: 0px; 
     /* Color de fondo suave para la página */
-    background-color: #f2f2f2; 
+    background-color: #1a1a1d; 
     /* Color de texto principal por defecto */
-    color: #333; 
+    color: #f0f0f0; 
 }
 
 /* Estilos para el 'div' que envuelve todo el contenido */
