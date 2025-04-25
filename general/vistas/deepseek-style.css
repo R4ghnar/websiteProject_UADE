@@ -1,5 +1,7 @@
 div{ 
+
     width: 200px;
-    height: 300px;
-    background-color: blueviolet;
+    display: flex;
+    height: 400px;
+    background-color: aqua;
 }
