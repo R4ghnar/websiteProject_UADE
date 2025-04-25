@@ -1,0 +1,11 @@
+/* Estilos generales para toda la página */
+body {
+    /* Tipo de letra principal, con alternativas si no se encuentra la primera */
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    /* Elimina el margen que ponen los navegadores por defecto */
+    margin: 0px; 
+    /* Color de fondo suave para la página */
+    background-color: #f2f2f2; 
+    /* Color de texto principal por defecto */
+    color: #333; 
+}
