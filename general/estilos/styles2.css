@@ -1,0 +1,104 @@
+/* Estilos generales para toda la página */
+body {
+    /* Tipo de letra principal, con alternativas si no se encuentra la primera */
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    /* Elimina el margen que ponen los navegadores por defecto */
+    margin: 0px; 
+    /* Color de fondo suave para la página */
+    background-color: #f2f2f2; 
+    /* Color de texto principal por defecto */
+    color: #333; 
+}
+
+/* Estilos para el 'div' que envuelve todo el contenido */
+#contenedor {
+    /* Ancho que ocupará el contenido (80% del ancho de la pantalla) */
+    width: 80%; 
+    /* Margen: 30px arriba/abajo, y 'auto' a los lados para centrarlo */
+    margin: 30px auto; 
+    /* Fondo blanco para que el contenido resalte */
+    background-color: #fff; 
+    /* Espacio interior entre el borde y el contenido */
+    padding: 20px; 
+    /* Borde delgado y gris alrededor del contenido */
+    border: 1px solid #ccc; 
+}
+
+/* Estilo para el título principal H2 */
+h2 {
+    /* Centrar el texto del título */
+    text-align: center; 
+    /* Color azul para el título */
+    color: #0056b3; 
+    /* Margen inferior para separarlo del resto */
+    margin-bottom: 30px;
+}
+
+/* Estilo para los subtítulos H3 */
+h3 {
+    /* Mismo color que el H2 */
+    color: #0056b3; 
+    /* Línea debajo del subtítulo para separar visualmente */
+    border-bottom: 1px solid #eee; 
+    /* Pequeño espacio entre el texto del H3 y la línea */
+    padding-bottom: 5px; 
+    /* Margen superior para separar las secciones */
+    margin-top: 30px; 
+}
+
+/* Estilo para los párrafos de texto */
+p {
+    /* Altura de línea para que el texto no esté muy apretado */
+    line-height: 1.6; 
+    /* Margen inferior para separar párrafos */
+    margin-bottom: 15px; 
+}
+
+/* Estilo para las listas con viñetas */
+ul {
+    /* Espacio a la izquierda para la sangría de las viñetas */
+    padding-left: 20px; 
+    /* Margen inferior para separar la lista del siguiente elemento */
+    margin-bottom: 15px;
+}
+
+/* Estilo para cada elemento de las listas */
+li {
+    /* Margen inferior para separar los ítems de la lista */
+    margin-bottom: 10px; 
+    /* Altura de línea para los ítems */
+    line-height: 1.5;
+}
+
+/* Estilos específicos para la imagen */
+#imagen-gemini {
+    /* Hacer que la imagen flote a la derecha del texto */
+    float: right; 
+    /* Ancho fijo para la imagen */
+    width: 150px; 
+    /* Margen a la izquierda para que no se pegue al texto */
+    margin-left: 20px; 
+    /* Margen abajo por si hay texto debajo */
+    margin-bottom: 10px; 
+    /* Borde opcional alrededor de la imagen */
+    border: 1px solid #ddd; 
+}
+
+/* Estilos para los enlaces (etiqueta <a>) */
+a {
+    /* Color azul para los enlaces */
+    color: #0066cc; 
+}
+
+/* Estilo para los enlaces CUANDO pasas el mouse por encima */
+a:hover {
+    /* Cambia a un azul más oscuro al pasar el mouse */
+    color: #004080; 
+}
+
+/* Una regla útil para asegurar que el contenedor se expanda correctamente si hay elementos flotantes dentro (como la imagen) */
+section::after {
+    content: "";
+    display: table;
+    clear: both; 
+}
