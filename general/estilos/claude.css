@@ -8,4 +8,20 @@ body {
     background-color: #f2f2f2; 
     /* Color de texto principal por defecto */
     color: #333; 
+
+
 }
+
+
+.claude-header{
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    margin: 10% auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
