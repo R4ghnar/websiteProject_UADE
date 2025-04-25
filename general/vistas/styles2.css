@@ -1,0 +1,103 @@
+/* Estilos generales del cuerpo */
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    margin: 0px; 
+    /* Fondo oscuro similar al logo */
+    background-color: #1a1a1d; 
+    /* Color de texto claro por defecto para contraste */
+    color: #f0f0f0; 
+}
+
+/* Contenedor principal */
+#contenedor {
+    width: 80%; 
+    max-width: 900px; /* Añadido un ancho máximo para pantallas grandes */
+    margin: 30px auto; 
+    /* Mantenemos un fondo ligeramente diferente o sin fondo para que se vea el del body */
+    /* background-color: #2d2d30; */ /* Opcional: un gris un poco más claro */
+    padding: 25px 40px; /* Más padding horizontal */
+    border: 1px solid #444; /* Borde más visible en fondo oscuro */
+    /* Podríamos usar border-radius aquí */
+    /* border-radius: 10px; */
+}
+
+/* Logo de Gemini */
+#logo-gemini {
+    display: block; /* Necesario para poder centrar con margin: auto */
+    margin: 0 auto 30px auto; /* Centrado horizontal, margen inferior de 30px */
+    width: 250px; /* Ajusta el tamaño según necesites */
+    /* max-width: 80%; */ /* Para que no sea demasiado grande en pantallas pequeñas */
+}
+
+/* Título principal H2 */
+h2 {
+    text-align: center; 
+    /* Color azul brillante del logo */
+    color: #4a80f5; 
+    margin-bottom: 40px; /* Más espacio debajo del título */
+    font-size: 2.5em; /* Tamaño más grande */
+}
+
+/* Subtítulos H3 */
+h3 {
+    /* Color púrpura/magenta del logo */
+    color: #c444ec; 
+    border-bottom: 1px solid #555; /* Línea separadora más visible */
+    padding-bottom: 8px; 
+    margin-top: 40px; /* Más espacio entre secciones */
+    margin-bottom: 20px; /* Espacio antes del contenido de la sección */
+    font-size: 1.8em;
+}
+
+/* Párrafos */
+p {
+    line-height: 1.7; /* Un poco más de interlineado */
+    margin-bottom: 18px; 
+    font-size: 1em; /* Tamaño base */
+}
+
+/* Listas desordenadas */
+ul {
+    padding-left: 25px; 
+    margin-bottom: 20px;
+}
+
+/* Elementos de lista */
+li {
+    margin-bottom: 12px; 
+    line-height: 1.6;
+}
+
+/* Listas anidadas (como la de Ultra/Pro/Nano) */
+ul ul {
+    margin-top: 10px; /* Espacio antes de la lista anidada */
+    margin-bottom: 10px; /* Espacio después */
+}
+
+/* Negrita dentro de las listas (si se usa <b>) */
+li b {
+    /* Podríamos darle un color diferente si quisiéramos, ej. el azul */
+     color: #8ab4f8; /* Un azul más claro para destacar */
+}
+
+
+/* Estilos para los enlaces */
+a {
+    /* Usamos el azul para los enlaces */
+    color: #4a80f5; 
+    /* text-decoration: none; */ /* Opcional: quitar subrayado */
+}
+
+/* Estilo para enlaces al pasar el mouse (Hover) */
+a:hover {
+    /* Cambia al color magenta al pasar el mouse */
+    color: #d869ff; 
+    /* text-decoration: underline; */ /* Opcional: añadir subrayado al pasar el mouse */
+}
+
+/* No es estrictamente necesario limpiar floats si no usamos float */
+/* section::after {
+    content: "";
+    display: table;
+    clear: both; 
+} */
