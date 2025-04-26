@@ -1,61 +1,155 @@
-/*
-PALETA DE COLORES
- #D8DBE2; 
- #A9BCD0;
- #58A4B0;
- #373F51;
- #1B1B1E;
-*/
 
-body{
-    background-color:#D8DBE2 ;
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
 }
 
-footer{
-    background-color: #1B1B1E;
-    color: #D8DBE2;
-    width: 100%;
+* {
+    box-sizing: border-box; 
 }
 
-a:hover{
-    color: #1B1B1E;
+
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center; 
 }
 
-.h1_inicio{
+nav ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block; 
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none; 
+    padding: 5px 0;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #ddd;
+    border-bottom: 1px solid #ddd; 
+}
+
+
+h1.h1_inicio,
+h2.h2 {
     text-align: center;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
-.h2{
+h1.h1_inicio {
+   margin-bottom: 5px;
+   font-size: 2em;
+}
+
+h2.h2 {
+    font-size: 1.5em;
+    margin-bottom: 30px; 
+}
+
+div.formularios {
+    max-width: 500px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+section.form_registro {
+    background-color: #fff;
+    padding: 30px;
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
+    
+     border-radius: 8px; 
+     box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+
+
+section.form_registro input[type="text"],
+section.form_registro input[type="email"],
+section.form_registro textarea {
+    width: 100%; 
+    padding: 10px;
+    margin-bottom: 20px; 
+    border: 1px solid #ccc;
+    font-family: inherit; 
+    font-size: 1em;
+     border-radius: 4px; 
+}
+
+section.form_registro textarea {
+    height: 100px; 
+    resize: none; 
+}
+
+section.form_registro input.envios_reset {
+    display: inline-block; 
+    padding: 10px 20px;
+    border: none;
+    background-color: #555;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer; 
+    margin-right: 10px; 
+    margin-bottom: 10px; 
+    border-radius: 4px; 
+    transition: background-color 0.3s; 
+}
+
+section.form_registro input.envios_reset:hover {
+    background-color: #333;
+}
+
+section.form_registro a {
+    display: block; 
     text-align: center;
+    margin-top: 20px; 
+    color: #333;
 }
 
-.form_registro{
-    margin-right: 20px;   
+section.form_registro a:hover {
+    color: #000;
 }
 
-.form_inicio{
-    margin-left: 575px;
-}
 
-.formularios{
-    margin-left: 585px;
-}
+@media only screen and (max-width: 600px) {
+    nav ul li {
+        display: block; 
+        margin: 10px 0; 
+    }
 
-.envios_reset{
-    border-radius: 20px;
-    padding: 6px;
-}
+    h1.h1_inicio {
+       font-size: 1.6em;
+    }
 
-.envios_reset:hover{
-    background-color: #58A4B0;
-    cursor: pointer;
-}
+    h2.h2 {
+        font-size: 1.3em;
+    }
 
-textarea{
-    padding: 7px;
-    height: 80px;
-}
+    div.formularios {
+        width: 95%; 
+        padding: 0 10px;
+    }
 
-b{
-    margin-left: 495px;
+    section.form_registro {
+        padding: 20px;
+    }
+
+    section.form_registro input.envios_reset {
+        width: 100%; 
+        margin-right: 0; 
+    }
 }
