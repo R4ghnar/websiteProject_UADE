@@ -1,10 +1,32 @@
-<<<<<<< HEAD
-body {
-    font-family: Verdana, Arial, Helvetica, sans-serif; 
-    margin: 0px; 
-    background-color: #1a1a1d; 
-    color: #f0f0f0; 
+
+*{
+    margin: 0;
+    background-color: #FBF9F7;
     line-height: 1.6; 
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    text-decoration: none;
+    list-style: none;
+}
+
+nav{
+    background-color: var(--nav);
+}
+
+.svg-claude{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo-claude{
+    width: 50px
 }
 
 #contenedor {
@@ -15,28 +37,29 @@ body {
     border: 1px solid #444; 
 }
 
-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
 
 h2 {
-    color: #4a80f5; /* Azul similar a Gemini */
+    color: #0D0D0D; 
     font-size: 2.5em; 
-    margin-bottom: 5px; /* Menos espacio si solo es título */
+    margin-bottom: 5px;/* Menos espacio si solo es título */
+    
 }
 
 h3 {
-    color: #c444ec; /* Magenta/Púrpura similar a Gemini */
+    color: #0D0D0D; 
     border-bottom: 1px solid #555; 
     padding-bottom: 8px; 
     margin-top: 40px; 
     margin-bottom: 20px; 
     font-size: 1.8em;
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
 }
 
 h4 {
-    color: #8ab4f8; /* Azul más claro para H4 */
+    color: #0D0D0D; /* Azul más claro para H4 */
     margin-top: 30px;
     margin-bottom: 15px;
     font-size: 1.3em; 
@@ -68,7 +91,7 @@ h4 + ul {
 }
 
 li b {
-     color: #a7c6f8; /* Un poco más claro que el azul para H4 */
+     color: #0D0D0D; /* Un poco más claro que el azul para H4 */
 }
 
 a {
@@ -79,13 +102,6 @@ a:hover {
     color: #d869ff; 
 }
 
-/* Estilo específico para el enlace "Constitutional AI" si se desea */
-a.constitutional-ai {
-    /* Puedes añadir un estilo particular aquí si quieres */
-    /* ejemplo: */
-    /* border-bottom: 1px dotted #4a80f5; */
-    /* text-decoration: none; */
-}
 
 footer {
     margin-top: 40px;
@@ -146,32 +162,6 @@ footer h4 {
         padding-left: 20px;
     }
 }
-=======
-/* Estilos generales para toda la página */
-body {
-    /* Tipo de letra principal, con alternativas si no se encuentra la primera */
-    font-family: Verdana, Arial, Helvetica, sans-serif; 
-    /* Elimina el margen que ponen los navegadores por defecto */
-    margin: 0px; 
-    /* Color de fondo suave para la página */
-    background-color: #f2f2f2; 
-    /* Color de texto principal por defecto */
-    color: #333; 
-
-
-}
-
-
-.claude-header{
-    box-sizing: border-box;
-    width: 100%;
-    text-align: center;
-    text-decoration: none;
-    margin: 10% auto;
-    display: flex;
-    flex-direction: column;
-}
 
 
 
->>>>>>> moshblack_

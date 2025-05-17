@@ -12,7 +12,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--fondo-oscuro);
-    color: var(--texto-claro);-webkit-mask-repeat-x: ;
+    color: var(--texto-claro);
 }
 
 header {
