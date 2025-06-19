@@ -1,115 +1,196 @@
 body {
-    font-family: Verdana, Arial, Helvetica, sans-serif; 
-    margin: 0px; 
-    background-color: #1a1a1d; 
-    color: #f0f0f0; 
-    line-height: 1.6; 
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 20px;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 #contenedor {
-    width: 80%; 
-    max-width: 900px; 
-    margin: 30px auto; 
-    padding: 25px 40px; 
-    border: 1px solid #444; 
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 255, 154, 0.1);
+    transition: background-color 0.5s, color 0.5s;
+    overflow: hidden;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    background-color: #000000;
+    border-bottom: 2px solid #00ff9a;
+}
+
+#logo-deepsek {
+    width: 150px;
 }
 
 h1 {
-    text-align: center; 
-    color: #4a80f5; /* Azul similar a Gemini */
-    margin-top: 10px; /* Menos margen superior que H2 de Gemini */
-    margin-bottom: 40px; 
-    font-size: 2.5em; 
+    color: #00ff9a;
+    font-size: 2.5em;
+    margin: 10px 0;
 }
 
-h2 {
-    color: #c444ec; /* Magenta/Púrpura similar a Gemini */
-    border-bottom: 1px solid #555; 
-    padding-bottom: 8px; 
-    margin-top: 40px; 
-    margin-bottom: 20px; 
-    font-size: 1.8em;
+nav {
+    background-color: #252526;
+    padding: 10px;
+    text-align: center;
 }
 
-h3 {
-    color: #8ab4f8; /* Un azul más claro para diferenciar H3 */
-    border-bottom: 1px solid #555;
-    padding-bottom: 6px;
-    margin-top: 35px;
-    margin-bottom: 15px;
-    font-size: 1.5em; 
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #ccc;
+    font-weight: bold;
 }
 
-p {
-    margin-bottom: 18px; 
-    font-size: 1em; 
+nav a:hover {
+    color: #00ff9a;
 }
 
-section ul { /* Estilo para la lista de enlaces al final */
-    list-style-type: none; /* Quita viñetas */
-    padding-left: 0; /* Quita sangría */
+main {
+    padding: 25px;
+}
+
+#mensaje-bienvenida {
+    text-align: center;
+    background-color: #252526;
+    color: #00ff9a;
+    padding: 1px 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #444;
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+.titulo-seccion {
+    font-size: 1.5em;
+    color: #00dd88;
+    transition: color 0.5s;
+}
+
+.seccion-interactiva {
+    background-color: #252526;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #333;
     margin-top: 20px;
+    transition: background-color 0.5s;
 }
 
-section ul li {
-    margin-bottom: 10px; 
+.titulo-interactivo {
+    text-align: center;
+    margin-top: 0;
+    color: #00ff9a;
+    transition: color 0.5s;
 }
 
-a {
-    color: #4a80f5; 
+.quiz-container {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
 }
 
-a:hover {
-    color: #d869ff; 
+.pregunta {
+    font-weight: bold;
 }
 
-/* --- Media Queries para Responsividad --- */
+input[type="button"] {
+    padding: 10px 20px;
+    background-color: #00ff9a;
+    color: #121212;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+input[type="button"]:hover {
+    background-color: #5effc4;
+}
+
+.resultado-div {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.respuesta-correcta { color: #00ff9a; }
+.respuesta-incorrecta { color: #ff4d4d; }
+
+footer {
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #000000;
+    border-top: 2px solid #00ff9a;
+}
+
+footer a {
+    color: #00ff9a;
+    text-decoration: none;
+}
 
 @media only screen and (max-width: 768px) {
-    #contenedor {
-        width: 90%; 
-        padding: 20px 20px; 
+    main {
+        padding: 20px 15px;
     }
 
     h1 {
-        font-size: 2em; 
-        margin-bottom: 30px;
+        font-size: 2em;
     }
 
-    h2 {
-        font-size: 1.5em; 
-        margin-top: 30px;
-    }
-     h3 {
+    .titulo-seccion {
         font-size: 1.3em;
-        margin-top: 30px;
     }
 }
 
 @media only screen and (max-width: 480px) {
-    #contenedor {
-        width: 95%; 
-        padding: 15px 15px; 
-        margin: 15px auto; 
-    }
-
-     h1 {
-        font-size: 1.8em; 
-        margin-bottom: 25px;
-    }
-
-    h2 {
-        font-size: 1.3em; 
-    }
-     h3 {
-        font-size: 1.1em;
-    }
-
     body {
-        font-size: 0.95em; 
+        padding: 0;
+    }
+
+    #contenedor {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        border: none;
+    }
+
+    nav a {
+        display: block;
+        padding: 10px;
+        margin: 0;
     }
     
-    section ul {
-        margin-top: 15px;
+    nav {
+        border-top: 1px solid #333;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    input[type="button"] {
+        width: 100%;
+        padding: 12px;
     }
 }

@@ -11,25 +11,26 @@
 
     <nav>
         <ul>
-          <li><a href="./gemini.html">Gemini</a></li>
-          <li><a href="./deepseek.html">DeepSeek</a></li>
-          <li><a href="./claude.html">Claude</a></li>
-          <li><a href="./registro.html">Registro</a></li>
+            <li id="welcomeMessage" style="display:none;">Hola, <span id="userName"></span></li>
+            <li id="logoutLink" style="display:none;"><a href="#" onclick="cerrar_sesion()">Cerrar Sesión</a></li>
+            
+            <li><a href="./gemini.html">Gemini</a></li>
+            <li><a href="./deepseek.html">DeepSeek</a></li>
+            <li><a href="./claude.html">Claude</a></li>
+            <li><a href="./registro.html">Registro</a></li>
         </ul>
       </nav>
 
     <h1 class="h1_inicio">Todavía no tenés cuenta?</h1>
-
 
     <h2 class="h2">Por favor, registrate: </h2>
 
     <br><br>
 
     <div class="formularios">
-        <!-- FORMULARIO DE REGISTRO -->
         <section class="form_registro">
             
-            <form method="post">
+            <form method="post" onsubmit="return iniciar_registro()">
                 
                 <input type="text" placeholder="Nombre" maxlength="15" name="nombre" id="nombre" required> 
 
@@ -41,7 +42,7 @@
                 
                 <input type="email" placeholder="Email" name="email" id="email" required>
 
-                <input class="envios_reset" type="submit" value="Registro" onclick="(iniciar_registro())">
+                <input class="envios_reset" type="submit" value="Registro">
                 <input class="envios_reset" type="reset" value="Reestablecer Campos">
 
             </form>

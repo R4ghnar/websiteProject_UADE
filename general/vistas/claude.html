@@ -1,106 +1,152 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../estilos/claude.css"> 
     <title>Claude.AI</title>
-    <link rel="stylesheet" href="/general/estilos/claude.css">
 </head>
-<body>
-
+<body onload="darBienvenida()">
 <div id="contenedor">
-
-    <nav>
-        <ul>
-          <li><a href="./gemini.html">Gemini</a></li>
-          <li><a href="./deepseek.html">DeepSeek</a></li>
-          <li><a href="./claude.html">Claude</a></li>
-          <li><a href="./registro.html">Registro</a></li>
-        </ul>
-      </nav>
-
     <header>
-        <h2>Chatbot Claude.AI</h2>
+        <img id="logo-claude" src="../imagenes/claude_logo.jpg" alt="Logo de Claude obtenido de internet">
+        <h2 id="titulo-principal">Chatbot Claude.AI</h2>
     </header>
 
+    <nav>
+        <a href="./index.html">Página Principal</a>
+        <a href="./gemini.html">Gemini</a>
+        <a href="./deepseek.html">DeepSeek</a>
+        <a href="./registro.html">Registro</a>
+    </nav>
     
-    <img id="logo-claude" src="../imagenes/claude_logo.jpg" alt="Logo de Claude obtenido de internet">
+    <main>
+        <div id="mensaje-bienvenida"></div>
 
+        <section id="que-es">
+            <h3 class="titulo-seccion">¿Qué es?</h3>
+            <p>Claude es un asistente de inteligencia artificial conversacional desarrollado por Anthropic. Fue diseñado con carácter constitucional, esto quiere decir que es útil, inofensivo y honesto en las interacciones con los usuarios.</p>
+            <p>Su desarrollo comenzó cuando Anthropic fue fundada en 2021 por un equipo de antiguos investigadores de OpenAI. La primera versión pública de Claude se lanzó a fines de 2022, y desde entonces ha pasado por varias actualizaciones y mejoras.</p>
+        </section>
 
-    <section id="que-es">
-        <h3>¿Qué es?</h3>
-        <p>Claude es un asistente de inteligencia artificial conversacional desarrollado por Anthropic. Fue diseñado con carácter constitucional, esto quiere decir que es útil, inofensivo y honesto en las interacciones con los usuarios.</p>
-        <p>Su desarrollo comenzó cuando Anthropic fue fundada en 2021 por un equipo de antiguos investigadores de OpenAI. La primera versión pública de Claude se lanzó a fines de 2022, y desde entonces ha pasado por varias actualizaciones y mejoras.</p>
-    </section>
+        <section id="caracteristicas">
+            <h3 class="titulo-seccion">Características principales</h3>
+            <ul>
+                <li><b>Conversación natural y detallada:</b> puede mantener conversaciones extensas y naturales sobre una amplia variedad de temas.</li>
+                <li><b>Razonamiento:</b> tiene capacidades para resolver problemas complejos y explicar el paso a paso.</li>
+                <li><b>Generación de contenido:</b> puede crear textos creativos, informativos y útiles según las necesidades del usuario.</li>
+            </ul>
+        </section>
 
-    <section id="caracteristicas">
-        <h3>Características principales</h3>
-        <ul>
-            <li><b>Conversación natural y detallada:</b> puede mantener conversaciones extensas y naturales sobre una amplia variedad de temas.</li>
-            <li><b>Razonamiento:</b> tiene capacidades para resolver problemas complejos y explicar el paso a paso.</li>
-            <li><b>Comprensión contextual:</b> puede entender y mantener el contexto a lo largo de una conversación.</li>
-            <li><b>Generación de contenido:</b> puede crear textos creativos, informativos y útiles según las necesidades del usuario.</li>
-            <li><b>Versatilidad en formatos:</b> puede trabajar con diferentes formatos como texto estructurado, código, etc.</li>
-            <li><b>Multi-idioma:</b> puede comunicarse en varios idiomas, por ejemplo el español.</li>
-        </ul>
-    </section>
+        <section id="seccion-interactiva-1" class="seccion-interactiva">
+            <h2 class="titulo-interactivo">Pon a Prueba tus Conocimientos</h2>
+            <div class="quiz-container">
+                <p class="pregunta">1. ¿Qué principio de diseño fundamental guía el desarrollo de Claude?</p>
+                <p class="opcion">A) La máxima velocidad de respuesta.</p>
+                <p class="opcion">B) La generación de imágenes fotorrealistas.</p>
+                <p class="opcion">C) La "IA Constitucional" (ser útil, honesto y seguro).</p>
+                <input type="button" value="Verificar Respuesta 1" onclick="verificarRespuestaQuiz1('C')">
+                <div id="resultadoQuiz1" class="resultado-div"></div>
+            </div>
+        </section>
 
-    <section id="diferencias">
-         <h4>¿En qué se diferencia del resto?</h4>
-        <p>Lo que la diferencia de otras IAs similares es el enfoque en la seguridad, honestidad y consideración. Fue entrenado con técnicas de <a class="constitutional-ai" href="https://claudeaihub.com/constitutional-ai/#what-is-constitutional-ai" target="_blank">"Constitutional AI"</a> que me ayudan a ser útil sin generar contenido dañino. También se le conoce por proporcionar respuestas detalladas y matizadas, con capacidad para considerar diferentes perspectivas sobre temas complejos.</p>
-    </section>
+        <section id="seccion-interactiva-2" class="seccion-interactiva">
+            <div class="quiz-container">
+                <p class="pregunta">2. ¿Quién desarrolló Claude?</p>
+                <p class="opcion">A) Google</p>
+                <p class="opcion">B) Anthropic</p>
+                <p class="opcion">C) DeepSeek AI</p>
+                <input type="button" value="Verificar Respuesta 2" onclick="verificarRespuestaQuiz2('B')">
+                <div id="resultadoQuiz2" class="resultado-div"></div>
+            </div>
+        </section>
 
+        <section id="seccion-interactiva-3" class="seccion-interactiva">
+            <h2 class="titulo-interactivo">Personaliza tu Experiencia</h2>
+             <div class="controles-visuales">
+                <input type="button" onclick="cambiarTema()" value="Cambiar Tema (Claro/Oscuro)">
+                <input type="button" onclick="mostrarOcultar('ventajas-desventajas')" value="Ver/Ocultar Ventajas">
+            </div>
+        </section>
 
-    <section id="aplicaciones">
-        <h3>Aplicaciones y Usos</h3>
-        <ul>
-            <li><b>Asistencia Empresarial:</b> ayudando a profesionales con tareas de investigación, redacción y análisis.</li>
-            <li><b>Educación:</b> apoyando a estudiantes y educadores como herramientas de aprendizaje.</li>
-            <li><b>Desarrollo de software:</b> asistiendo a programadores con código, debugging y explicaciones técnicas.</li>
-            <li><b>Creatividad:</b> colaborando en la generación de contenido creativo.</li>
-            <li><b>Atención al cliente:</b> proporcionando información y asistencia a usuarios.</li>
-        </ul>
-    </section>
-
-    <section id="ventajas-desventajas">
-        <h3>Ventajas, desventajas y limitations</h3>
-        <p>Aunque la era de la inteligencia artificial crece rápidamente, siempre se cuenta con sus ventajas, desventajas y limitaciones. Como todo chatbot, les presentaremos algunas de ellas.</p>
-
-        <h4>Ventajas</h4>
-        <ul>
-            <li><b>Precisión y claridad:</b> proporciona información precisa y explicaciones claras.</li>
-            <li><b>Seguridad:</b> está diseñado para ser útil, inofensivo y honesto.</li>
-            <li><b>Versatilidad:</b> puede ayudar con una amplia variedad de tareas y temas.</li>
-            <li><b>Personalización:</b> puede adaptar el tono y el enfoque según las necesidades del usuario.</li>
-            <li><b>Eficiencia:</b> ayuda a automatizar tareas que consumen tiempo a acelerar procesos.</li>
-            <li><b>Accesibilidad:</b> proporciona acceso instantáneo a información y asistencia.</li>
-            <li><b>Mejora continua:</b> su capacidad evoluciona constantemente con las actualizaciones de Anthropic.</li>
-        </ul>
-
-        <h4>Desventajas y limitations</h4>
-        <ul>
-            <li><b>Conocimiento limitado:</b> su conocimiento tiene una fecha de corte (finales de octubre de 2024), con esto dicho no tiene acceso a información más reciente.</li>
-            <li><b>Falta de experiencia directa:</b> no puede acceder a internet en tiempo real, ni ver imágenes o contenido que no se le proporcione directamente.</li>
-            <li><b>Posibles inexactitudes:</b> como todo chatbot aunque intente ser preciso, puede cometer errores o proporcionar información incompleta.</li>
-            <li><b>Desafíos de contexto:</b> Tiene un límite en la cantidad de contexto que puedo mantener en la conversación.</li>
-            <li><b>Consideraciones éticas:</b> como cualquier tecnología IA, Claude plantea consideraciones sobre privacidad, dependencia tecnológica y potencial impacto en el empleo.</li>
-        </ul>
-    </section>
-
-    <br>
-    <a href="./index.html">Volver al inicio</a>
-
+        <section id="ventajas-desventajas" style="display: none;">
+            <h3 class="titulo-seccion">Ventajas</h3>
+            <ul>
+                <li><b>Precisión y claridad:</b> proporciona información precisa y explicaciones claras.</li>
+                <li><b>Seguridad:</b> está diseñado para ser útil, inofensivo y honesto.</li>
+                <li><b>Versatilidad:</b> puede ayudar con una amplia variedad de tareas y temas.</li>
+            </ul>
+        </section>
+    </main>
+    
     <footer>
-        <h4>Recursos Adicionales</h4>
-        <ul>
-            <li><a href="https://claude.ai/new" target="_blank">Página web oficial</a></li>
-            <li><a href="https://docs.anthropic.com/en/docs/welcome" target="_blank">Documentación API</a></li>
-            <li><a href="https://www.anthropic.com/news" target="_blank">Blog de Anthropic</a></li>
-            <li><a href="https://support.anthropic.com/es/" target="_blank">Soporte</a></li>
-        </ul>
+        <a href="./index.html">Volver al inicio</a>
     </footer>
-
 </div>
- </body>
+    <script language="javascript">
+        function darBienvenida() {
+            let nombre = prompt("¡Hola! ¿Cuál es tu nombre?");
+            if (nombre) {
+                document.getElementById('mensaje-bienvenida').innerHTML = "<h2 class='saludo'>Bienvenido/a, " + nombre + "!</h2>";
+            }
+        }
+
+        function verificarRespuestaQuiz1(respuestaCorrecta) {
+            let respuestaUsuario = prompt("Pregunta 1: Ingresa la letra de tu respuesta (A, B, o C):");
+            let resultadoDiv = document.getElementById('resultadoQuiz1');
+            if (respuestaUsuario) {
+                if (respuestaUsuario.toUpperCase() === respuestaCorrecta) {
+                    resultadoDiv.innerHTML = "<p class='respuesta-correcta'>¡Correcto! La IA Constitucional es su pilar.</p>";
+                } else {
+                    resultadoDiv.innerHTML = "<p class='respuesta-incorrecta'>Incorrecto. La respuesta correcta es la C.</p>";
+                }
+            }
+        }
+
+        function verificarRespuestaQuiz2(respuestaCorrecta) {
+            let respuestaUsuario = prompt("Pregunta 2: Ingresa la letra de tu respuesta (A, B, o C):");
+            let resultadoDiv = document.getElementById('resultadoQuiz2');
+            if (respuestaUsuario) {
+                if (respuestaUsuario.toUpperCase() === respuestaCorrecta) {
+                    resultadoDiv.innerHTML = "<p class='respuesta-correcta'>¡Correcto! Fue desarrollado por Anthropic.</p>";
+                } else {
+                    resultadoDiv.innerHTML = "<p class='respuesta-incorrecta'>Incorrecto. Intenta de nuevo.</p>";
+                }
+            }
+        }
+
+        let temaActual = 'claro';
+        function cambiarTema() {
+            let contenedor = document.getElementById('contenedor');
+            let titulosSeccion = document.querySelectorAll('.titulo-seccion');
+            let titulosInteractivos = document.querySelectorAll('.titulo-interactivo');
+            let quizContainers = document.querySelectorAll('.quiz-container');
+
+            if (temaActual === 'claro') {
+                contenedor.style.backgroundColor = "#4a4e69";
+                contenedor.style.color = "#f2e9e4";
+                titulosSeccion.forEach(function(h3) { h3.style.color = "#c9ada7"; });
+                titulosInteractivos.forEach(function(h2) { h2.style.color = "#c9ada7"; });
+                quizContainers.forEach(function(div) { div.style.backgroundColor = "#22223b"; });
+                temaActual = 'oscuro';
+            } else {
+                contenedor.style.backgroundColor = "#ffffff";
+                contenedor.style.color = "#4a4e69";
+                titulosSeccion.forEach(function(h3) { h3.style.color = "#8e44ad"; });
+                titulosInteractivos.forEach(function(h2) { h2.style.color = "#6a0dad"; });
+                quizContainers.forEach(function(div) { div.style.backgroundColor = "#ffffff"; });
+                temaActual = 'claro';
+            }
+        }
+
+        function mostrarOcultar(idSeccion) {
+            let seccion = document.getElementById(idSeccion);
+            if (seccion.style.display === "none" || seccion.style.display === "") {
+                seccion.style.display = "block";
+            } else {
+                seccion.style.display = "none";
+            }
+        }
+    </script>
+</body>
 </html>
